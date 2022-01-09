@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -9,12 +9,24 @@ function Homepage() {
 
    const navigation = useNavigation();
 
+   const [characters, setCharacters] = useState([])
+
+   const getCharacters = () => {
+       fetch('https://rickandmortyapi.com/api/character/1,2,3,4,5')
+       .then(res => res.json())
+       .then(res => setCharacters(res));   
+   
+   }
+   
+   useEffect(() => {
+     getCharacters()
+     },[]);
 
     return (
     <View style={styles.container} >  
       <Image source={require("../images/schwiftyfactstitle2.png")} style={styles.image}/>
        <Image source={require("../images/rickandmortyportal2.png")} style={styles.image2}/>
-       <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('Characters')}>
+       <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('Characters', { data: characters })}>
           <Text style={{fontSize:30, color:"white",fontWeight:"bold"}}>Characters</Text>
        </TouchableOpacity>
        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('Episodes')}>

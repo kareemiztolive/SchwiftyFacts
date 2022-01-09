@@ -1,14 +1,23 @@
+import React, {useState, useEffect} from 'react';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import Homepage from "../screens/Homepage"
 import Characters from "../screens/Characters"
 import Episodes from "../screens/Episodes"
 import Locations from "../screens/Locations"
-import {View, Image, TouchableOpacity } from 'react-native';
+import {View, Image, TouchableOpacity} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 
 
 const Tab = createBottomTabNavigator()
 
+
+
 const Tabs = () => {
+
+
+
+
     return(
         <Tab.Navigator
         screenOptions={{headerShown:false}}>
@@ -21,10 +30,10 @@ const Tabs = () => {
                               width:25,
                               height:25
                           }}         
-                        />  
+                         />  
                     </View>
 
-                )}}/>
+                )}}  />
             <Tab.Screen name="Characters" component={Characters} options={{
                 tabBarIcon: () => (
                     <View>
@@ -37,7 +46,7 @@ const Tabs = () => {
                         />  
                     </View>
 
-                )}} />
+                )}}  />
             <Tab.Screen name="Episodes" component={Episodes} options={{
                 tabBarIcon: () => (
                     <View>
