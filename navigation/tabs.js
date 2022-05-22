@@ -6,6 +6,11 @@ import Episodes from "../screens/Episodes"
 import Locations from "../screens/Locations"
 import {View, Image, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Rick from "../screens/Rick"
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Stacks from "../navigation/stacks"
+
+
 
 
 
@@ -21,7 +26,7 @@ const Tabs = () => {
     return(
         <Tab.Navigator
         screenOptions={{headerShown:false}}>
-            <Tab.Screen name="Home" component={Homepage} options={{
+            <Tab.Screen name="Home" component={Stacks} options={{
                 tabBarIcon: () => (
                     <View>
                         <Image source={require("../icons/home.png")}
@@ -73,9 +78,16 @@ const Tabs = () => {
                     </View>
 
                 )}}/>
+                {/* <Tab.Screen name="Rick" component={Rick} /> */}
+                
+    
+
         </Tab.Navigator>
+        
 
     )
+    
+    
 }
 
 

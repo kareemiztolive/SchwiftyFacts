@@ -1,77 +1,78 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
+
+
 
 
 
 function Characters(props) {
 
+const navigation = useNavigation();
 
-
-  const characters = props.route.params.data
+const characters = props.route.params.data
 
   console.log(characters)
 
-  // let rick = characters.filter(character => character.name.includes('Rick'))
-
-  let rick = props.route.params.data.filter(data => data.name.includes('Rick'))
-  console.log(rick)
-
-
-  const morty = characters.filter(character => character.name.includes('Morty'))
-  // console.log(morty)
-
-  const summer = characters.filter(character => character.name.includes('Summer'))
-  // console.log(summer)
-
-  const beth = characters.filter(character => character.name.includes('Beth'))
-  // console.log(beth)
-
-  const jerry = characters.filter(character => character.name.includes('Jerry'))
-  // console.log(jerry)
-
+  
     return (
        <ScrollView style={styles.container}>
           <Text style={styles.header}>Characters</Text>
-         <TouchableOpacity>
+
           <View style={styles.card}>
           <Image source={{uri: characters[0].image}}style={styles.cardimage}/>
           <Text style={styles.title}>{characters[0].name}</Text>
           <Text style={styles.title2}>Last Location</Text>
           <Text style={styles.title3}>{characters[0].location.name}</Text>
-          </View>
+          <TouchableOpacity  style={styles.button1}  onPress={() => navigation.navigate('Rick', { data: characters })} >
+          <Text style={{fontSize:25, color:"white",fontWeight:"bold"}}>Learn More</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          </View>
+        
+        
           <View style={styles.card}>
           <Image source={{uri: characters[1].image}}style={styles.cardimage}/>
           <Text style={styles.title}>{characters[1].name}</Text>
           <Text style={styles.title2}>Last Location</Text>
           <Text style={styles.title3}>{characters[1].location.name}</Text>
-          </View>
+          <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('Morty', { data: characters })}> 
+          <Text style={{fontSize:25, color:"white",fontWeight:"bold"}}>Learn More</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          </View>
+         
+         
           <View style={styles.card}>
           <Image source={{uri: characters[2].image}}style={styles.cardimage}/>
           <Text style={styles.title}>{characters[2].name}</Text>
           <Text style={styles.title2}>Last Location</Text>
           <Text style={styles.title3}>{characters[2].location.name}</Text>
-          </View>
+          <TouchableOpacity style={styles.button1}  onPress={() => navigation.navigate('Summer', { data: characters })}>
+          <Text style={{fontSize:25, color:"white",fontWeight:"bold"}}>Learn More</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          </View>
+       
           <View style={styles.card}>
           <Image source={{uri: characters[3].image}}style={styles.cardimage}/>
           <Text style={styles.title}>{characters[3].name}</Text>
           <Text style={styles.title2}>Last Location</Text>
           <Text style={styles.title3}>{characters[3].location.name}</Text>
-          </View>
+          <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('Beth', { data: characters })}> 
+          <Text style={{fontSize:25, color:"white",fontWeight:"bold"}}>Learn More</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          </View>
+         
+      
           <View style={styles.card}>
           <Image source={{uri: characters[4].image}}style={styles.cardimage}/>
           <Text style={styles.title}>{characters[4].name}</Text>
           <Text style={styles.title2}>Last Location</Text>
           <Text style={styles.title3}>{characters[4].location.name}</Text>
-          </View>
+          <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('Jerry', { data: characters })}> 
+          <Text style={{fontSize:25, color:"white",fontWeight:"bold"}}>Learn More</Text>
           </TouchableOpacity>
+          </View>
+        
 
           </ScrollView>
     );
@@ -105,25 +106,22 @@ function Characters(props) {
       borderColor: "blue",
       borderRadius: 5,
       borderWidth: 1,
-      // overflow: 'hidden',
-      height: 450,
+      height: 530,
       width: 300,
       padding: 10,
       marginLeft: 30,
-      // position: "absolute",
       top: 60,
-      // left: 20
       marginBottom: 50
 
     },
     cardimage: {
         height: 300,
         width: 300,
-        // position: "absolute",
-        // top:80,
         left: -10,
         top: -10,
-        borderRadius: 5,
+        // borderRadius: 5,
+        borderTopRightRadius: 5,
+        borderTopLeftRadius: 5
       },
       title:{
         color: "black",
@@ -145,5 +143,17 @@ function Characters(props) {
         fontWeight: "700",
         position: "absolute",
         top: 390
-      }   
+      },  
+      button1: {
+        backgroundColor: "#e6209d",
+        // backgroundColor: "#e627bc",
+        paddingVertical: 10,
+        paddingHorizontal: 50,
+        borderRadius: 30,
+        width: 250,
+        textAlign: "center",
+        marginTop: 450,
+        position: "absolute",
+        right: 30
+      },
   });

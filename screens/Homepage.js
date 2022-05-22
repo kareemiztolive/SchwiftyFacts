@@ -27,7 +27,7 @@ function Homepage() {
       <Image source={require("../images/schwiftyfactstitle2.png")} style={styles.image}/>
        <Image source={require("../images/rickandmortyportal2.png")} style={styles.image2}/>
        <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('Characters', { data: characters })}>
-          <Text style={{fontSize:30, color:"white",fontWeight:"bold"}}>Characters</Text>
+           <Text style={{fontSize:30, color:"white",fontWeight:"bold"}}>Characters</Text>
        </TouchableOpacity>
        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('Episodes')}>
           <Text style={{fontSize:30, color:"white",fontWeight:"bold"}}>Episodes</Text>
