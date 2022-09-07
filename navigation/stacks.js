@@ -18,7 +18,7 @@ const Stacks = () => {
 
     return(
         <Stack.Navigator>
-        <Stack.Screen options={{headerShown: false}} name="Home" component={Homepage} />
+        <Stack.Screen options={{headerShown: false}} name="Homepage" component={Homepage} />
         <Stack.Screen name="Rick" component={Rick} />
         <Stack.Screen name="Morty" component={Morty} />
         <Stack.Screen name="Summer" component={Summer} />

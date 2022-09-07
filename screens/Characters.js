@@ -85,7 +85,7 @@ const characters = props.route.params.data
     container:{
       width: "100%",
       height: "85%",
-      // paddingRight: 5,
+      paddingRight: 5,
       flexDirection: "row",
       flexWrap: "wrap",
       paddingBottom: 50
@@ -103,9 +103,9 @@ const characters = props.route.params.data
       paddingBottom: 500  
     },
     card: {
-      borderColor: "blue",
+      borderColor: "grey",
       borderRadius: 5,
-      borderWidth: 1,
+      borderWidth: 0.5,
       height: 530,
       width: 300,
       padding: 10,
@@ -124,7 +124,7 @@ const characters = props.route.params.data
         borderTopLeftRadius: 5
       },
       title:{
-        color: "black",
+        color: "blue",
         fontSize: 40,
         fontWeight: "700",
         paddingBottom: 10,
