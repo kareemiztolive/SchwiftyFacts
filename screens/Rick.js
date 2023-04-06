@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, Image,TouchableOpacity,View } from 'react-native';
-import rickaudio1 from "../audio/rickaudio1.mp3"
+
 
 
 function Rick(props) {
@@ -28,8 +28,7 @@ return (
 </TouchableOpacity>
 
 <Image source={{uri: "https://static.wikia.nocookie.net/joke-battles/images/d/dd/Rick.png/revision/latest?cb=20170225194355" }}style={styles.image3}/>
-<Image source={{uri: 'https://upload.wikimedia.org/wikipedia/en/a/a6/Rick_Sanchez.png'}}
-       style={styles.image4} />
+<Image source={{uri: "https://upload.wikimedia.org/wikipedia/en/a/a6/Rick_Sanchez.png"}} style={styles.image4} />
 <Image source={{uri: "https://static.wikia.nocookie.net/poohadventures/images/2/2a/Rick_Sanchez_Full_Body.png/revision/latest?cb=20220105163338" }}style={styles.image5}/>
 <Image source={{uri: "https://images.squarespace-cdn.com/content/v1/54fc8146e4b02a22841f4df7/1572526429048-CUZHOPG0NT5E59FZS3AR/Art+of+Rick+and+Morty+%28A2%29+-+1.png" }}style={styles.image6}/>
 
@@ -69,7 +68,7 @@ const styles = StyleSheet.create({
         height: 330,
         resizeMode: 'contain',
         marginBottom: 350,
-        borderRadius: 50,
+        borderRadius: 280,
         marginLeft: 60,
     },
     button1: {

@@ -22,7 +22,7 @@ const Stacks = () => {
         <Stack.Screen name="Rick" component={Rick} />
         <Stack.Screen name="Morty" component={Morty} />
         <Stack.Screen name="Summer" component={Summer} />
-        <Stack.Screen name="Beth" component={Summer} />
+        <Stack.Screen name="Beth" component={Beth} />
         <Stack.Screen name="Jerry" component={Jerry} />
       </Stack.Navigator>
 
