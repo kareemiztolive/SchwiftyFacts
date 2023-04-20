@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 
 function Episodes() {
@@ -31,12 +31,18 @@ const getEpisodes= () => {
           <View>
             <Text style={styles.text1}>{episode.episode}</Text>
             <Text style={styles.text2}>{episode.name}</Text>
+            <Text style={styles.text3}>Episode</Text>
+            <TouchableOpacity style={styles.button1}>
+              <Text style={{fontSize:17, color:"white",fontWeight:"bold"}}>{episode.id}</Text>
+            </TouchableOpacity>
+
           </View>
         );
       })}
      </ScrollView>
     );
   }
+
 
 
   export default Episodes
@@ -61,7 +67,7 @@ const getEpisodes= () => {
     },
     text1: {
       padding: 5,
-      fontSize: 30,
+      fontSize: 28,
       marginTop: 5,
       borderTopWidth: 0.5,
       fontWeight: "700",
@@ -69,11 +75,35 @@ const getEpisodes= () => {
       
     },
     text2: {
-      padding: 5,
-      fontSize: 26,
+      paddingRight: 120,
+      paddingLeft: 20,
+      paddingBottom: 10,
+      fontSize: 19,
       marginTop: 8,
+      marginLeft: -15,
       fontWeight: "700",
       color: "#18de77"
        
-    }
+    },
+    text3: {
+      padding: 15,
+      fontSize: 20,
+      marginTop: -6,
+      paddingLeft: 245,
+      fontWeight: "700",
+      position: "absolute"
+
+   
+    },
+    button1: {
+      backgroundColor: "blue",
+      paddingVertical: 10,
+      paddingHorizontal: 50,
+      borderRadius: 60,
+      width: 120,
+      textAlign: "center",
+      marginTop:50,
+      position: "absolute",
+      right: 10
+     },
   });
