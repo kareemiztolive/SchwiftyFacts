@@ -6,7 +6,7 @@ function Episodes() {
    
 const [episodes, setEpisodes] = useState([])
 
-const getEpisodes= () => {
+const getEpisodes = () => {
       fetch('https://rickandmortyapi.com/api/episode')
       .then(res => res.json())
       .then(res => setEpisodes(res));   
