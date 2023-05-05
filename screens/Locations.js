@@ -40,7 +40,6 @@ useEffect(() => {
             <TouchableOpacity style={styles.button3}>
               <Text style={{fontSize:16, color:"white",fontWeight:"bold"}}>{location.type}</Text>
             </TouchableOpacity>
-
           </View>
         );
       })}

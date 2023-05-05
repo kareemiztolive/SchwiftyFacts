@@ -42,13 +42,6 @@ return (
 export default Morty
 
 const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    // backgroundColor: '#fff',
-    // alignItems: 'stretch',
-    // justifyContent: 'space-between',
-
-  },
 header: {
     left: 20,
     fontSize: 40,
@@ -57,12 +50,13 @@ header: {
   }, 
   image1: {
     flex: 1,
-    width: 230,
-    height: 330,
+    width: 270,
+    height: 270,
     resizeMode: 'contain',
     marginBottom: 350,
-    borderRadius: 50,
-    marginLeft: 60,
+    marginTop: 20,
+    borderRadius: 160,
+    marginLeft: 50,
 },
 button1: {
     backgroundColor: "#4741fa",
@@ -73,14 +67,14 @@ button1: {
     textAlign: "center",
     position: "absolute",
     right: 55,
-    marginTop: 310,
+    marginTop: 340,
     left: 32,
    },
    text1: {
     fontSize: 18,
     fontWeight: "500",
 //    paddingBottom: 50
-   marginTop: -260,
+   marginTop: -160,
    },
    button2: {
     backgroundColor: "#dd61ff",
@@ -90,7 +84,7 @@ button1: {
     borderRadius: 50,
     width: 300,
     textAlign: "center",
-    marginTop: 45,
+    marginTop: 70,
     // position: "absolute",
     left: 30,
    marginBottom: 50

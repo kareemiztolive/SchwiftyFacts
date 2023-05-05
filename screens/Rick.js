@@ -19,7 +19,7 @@ return (
     <Text style={{fontSize:30, color:"white",fontWeight:"bold"}}>Character Biography</Text>
 </TouchableOpacity>
  <Text style={styles.text1}>
- Rick Sanchez from Earth (Dimension C-137)Rick Sanchez is one of the two eponymous characters 
+ Richard Daniel "Rick" Sanchez from Earth (Dimension C-137)Rick Sanchez is one of the two eponymous characters 
  and the main protagonist from the Adult Swim animated television series Rick and Morty. 
  He is suggessted throughout the entire series to be considered the smartest person in the universe. 
  </Text>
@@ -31,6 +31,15 @@ return (
 <Image source={{uri: "https://upload.wikimedia.org/wikipedia/en/a/a6/Rick_Sanchez.png"}} style={styles.image4} />
 <Image source={{uri: "https://static.wikia.nocookie.net/poohadventures/images/2/2a/Rick_Sanchez_Full_Body.png/revision/latest?cb=20220105163338" }}style={styles.image5}/>
 <Image source={{uri: "https://images.squarespace-cdn.com/content/v1/54fc8146e4b02a22841f4df7/1572526429048-CUZHOPG0NT5E59FZS3AR/Art+of+Rick+and+Morty+%28A2%29+-+1.png" }}style={styles.image6}/>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,13 +58,6 @@ return (
 export default Rick
 
 const styles = StyleSheet.create({
-    container: {
-        // flex: 1,
-        // backgroundColor: '#fff',
-        // alignItems: 'stretch',
-        // justifyContent: 'space-between',
-
-      },
     header: {
         left: 20,
         fontSize: 40,
@@ -64,12 +66,13 @@ const styles = StyleSheet.create({
       }, 
       image1: {
         flex: 1,
-        width: 230,
-        height: 330,
+        width: 270,
+        height: 270,
         resizeMode: 'contain',
         marginBottom: 350,
-        borderRadius: 280,
-        marginLeft: 60,
+        marginTop: 20,
+        borderRadius: 140,
+        marginLeft: 50,
     },
     button1: {
         backgroundColor: "#4741fa",
@@ -80,14 +83,14 @@ const styles = StyleSheet.create({
         textAlign: "center",
         position: "absolute",
         right: 55,
-        marginTop: 310,
+        marginTop: 340,
         left: 32,
        },
        text1: {
         fontSize: 18,
         fontWeight: "500",
     //    paddingBottom: 50
-       marginTop: -260,
+       marginTop: -160,
        },
        button2: {
         backgroundColor: "#dd61ff",
@@ -97,7 +100,7 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         width: 300,
         textAlign: "center",
-        marginTop: 45,
+        marginTop: 70,
         // position: "absolute",
         left: 30,
        marginBottom: 50
