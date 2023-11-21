@@ -9,7 +9,7 @@ const [locations, setLocations] = useState([])
 const getLocations = () => {
   fetch('https://rickandmortyapi.com/api/location')
   .then(res => res.json())
-  .then(res => setLocations(res));  
+  .then(res => setLocations(res));
 }
 
 
@@ -17,7 +17,7 @@ useEffect(() => {
   getLocations()
   },[]); 
 
-  const locations1 = locations.results
+  const locations1 = locations.results || [];
 
   console.log(locations1)
 
@@ -27,7 +27,7 @@ useEffect(() => {
      <Text style={styles.header}> Locations </Text>
      {locations1.map((location) => {
         return (
-          <View>
+          <View key={location.id}>
             <Text style={styles.text1}>Dimension</Text>
             <Text style={styles.text2}>Location</Text>
             <Text style={styles.text3}>Type</Text>

@@ -1,9 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import { ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 
 
 function Episodes() {
    
+
+const navigation = useNavigation();
+
 const [episodes, setEpisodes] = useState([])
 
 const getEpisodes = () => {
@@ -17,22 +22,29 @@ const getEpisodes = () => {
     getEpisodes()
     },[]); 
   
-  const episodes1 = episodes
+    const episodes1 = episodes || {};
+    const episodelist = episodes1.results || [];
 
-  const episodelist = episodes1.results
 
+    
   console.log(episodelist)
   
+
+
+
   return (
      <ScrollView >
         <Text style={styles.header}>Episodes</Text>
         {episodelist.map((episode) => {
         return (
-          <View>
+          <View key={episode.id}>
             <Text style={styles.text1}>{episode.episode}</Text>
             <Text style={styles.text2}>{episode.name}</Text>
             <Text style={styles.text3}>Episode</Text>
-            <TouchableOpacity style={styles.button1}>
+            <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('Episodedetails', {
+      episodedata: episodelist,
+      episodeid: episode.id,
+    })}>
               <Text style={{fontSize:17, color:"white",fontWeight:"bold"}}>{episode.id}</Text>
             </TouchableOpacity>
 

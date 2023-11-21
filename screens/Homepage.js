@@ -99,4 +99,15 @@ function Homepage() {
         position: "absolute",
         right: 50
        },
+       button4: {
+        backgroundColor: "blue",
+        paddingVertical: 10,
+        paddingHorizontal: 50,
+        borderRadius: 30,
+        width: 250,
+        textAlign: "center",
+        marginTop: 680,
+        position: "absolute",
+        right: 50
+       },
   });

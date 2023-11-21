@@ -7,6 +7,7 @@ import Beth from "../screens/Beth"
 import Summer from "../screens/Summer"
 import Jerry from "../screens/Jerry"
 import Homepage from "../screens/Homepage"
+import Episodedetails from '../screens/Episodedetails';
 
 
 
@@ -24,6 +25,8 @@ const Stacks = () => {
         <Stack.Screen name="Summer" component={Summer} />
         <Stack.Screen name="Beth" component={Beth} />
         <Stack.Screen name="Jerry" component={Jerry} />
+        <Stack.Screen name="Episodedetails" component={Episodedetails} />
+
       </Stack.Navigator>
 
     )
